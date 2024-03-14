@@ -18,6 +18,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void UpdateCrystalCount(int32 Count, int32 Max);
 
+	UFUNCTION(BlueprintCallable)
+	void UpdateSouls(int32 Count);
+
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	class UTextBlock* CrystalCount;
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	class UTextBlock* SoulCount;
 };

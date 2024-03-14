@@ -12,3 +12,8 @@ void UUW_CrystalCounter::UpdateCrystalCount(int32 Count, int32 Max)
 		CrystalCount->SetText(FText::FromString(thing));
 	}
 }
+
+void UUW_CrystalCounter::UpdateSouls(int32 Count)
+{
+	SoulCount->SetText(FText::FromString(FString::FromInt(Count)));
+}
