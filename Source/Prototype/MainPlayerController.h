@@ -8,7 +8,7 @@
 #include "GameFramework/PlayerController.h"
 #include "MainPlayerController.generated.h"
 
-// Forward decaration
+// Forward declaration
 class UEnhancedInputComponent;
 class APlayerCharacter;
 class UInputMappingContext;
@@ -19,36 +19,59 @@ class PROTOTYPE_API AMainPlayerController : public APlayerController
 	GENERATED_BODY()
 
 public:
-	// The input action to mat to movement
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement");
-	TObjectPtr<UInputAction>ActionMove = nullptr;
+	// The Input Action to map to movement.
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
+	TObjectPtr<UInputAction> ActionMove = nullptr;
 
-	// The input action to map to looking around
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement");
-	TObjectPtr<UInputAction>ActionLook = nullptr;
+	// The Input Action to map to looking around.
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
+	TObjectPtr<UInputAction> ActionLook = nullptr;
 
-	// The input action to map to looking around
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement");
-	TObjectPtr<UInputAction>ActionLookUp = nullptr;
+	// The Input Action to map to looking around.
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
+	TObjectPtr<UInputAction> ActionLookUp = nullptr;
 
-	// The input action to map to jumping
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement");
-	TObjectPtr<UInputAction>ActionJump = nullptr;
+	// The Input Action to map to jumping.
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
+	TObjectPtr<UInputAction> ActionJump = nullptr;
 
-	// The input action to map to crouch
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement");
-	TObjectPtr<UInputAction>ActionCrouch = nullptr;
+	// The Input Action to map to crouch.
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
+	TObjectPtr<UInputAction> ActionToggleCrouch = nullptr;
 
-	// the input action to map to sprint
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement");
-	TObjectPtr<UInputAction>ActionSprint = nullptr;
+	// The Input Action to map to sprint.
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
+	TObjectPtr<UInputAction> ActionToggleSprint = nullptr;
 
-	// the input action to map to shoot
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement");
-	TObjectPtr<UInputAction>ActionShoot = nullptr;
+	// The Input Action to map to shoot.
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
+	TObjectPtr<UInputAction> ActionShoot = nullptr;
 
-	// the input mapping context to use
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement");
-	TObjectPtr<UInputMappingContext>UInputMappingContext = nullptr;
+	// The Input Mapping Context to use.
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
+	TObjectPtr<UInputMappingContext> InputMappingContent = nullptr;
+
+protected:
+	// Action Handler Functions
+	void		HandleLook(const FInputActionValue& InputActionValue);
+	void		HandleLookUp(const FInputActionValue& InputActionValue);
+	void		HandleMove(const FInputActionValue& InputActionValue);
+	void		HandleJump();
+	void		HandleShoot();
+	void		HandleToggleCrouch();
+	void		HandleToggleSprint();
+
+
+	virtual void OnPossess(APawn* aPawn) override;
+	virtual void OnUnPossess() override;
+
+private:
+	// Used to store a reference to the InputComponent cast to an EnhancedInputComponent.
+	UPROPERTY()
+	TObjectPtr<UEnhancedInputComponent> EnhancedInputComponent = nullptr;
+
+	// Used to store a reference to the pawn we are controlling.
+	UPROPERTY()
+	TObjectPtr<APlayerCharacter> PlayerCharacter = nullptr;
 
 };
