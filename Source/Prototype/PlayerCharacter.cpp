@@ -22,11 +22,15 @@ APlayerCharacter::APlayerCharacter()
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
 
+    // Create springArmComp
+    SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
+    SpringArmComp->SetupAttachment(GetCapsuleComponent());
+	SpringArmComp->bUsePawnControlRotation = true;
+
 	// Create camera component
 	CameraComp = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	CameraComp->SetupAttachment(GetCapsuleComponent());
+	CameraComp->SetupAttachment(SpringArmComp);
 	CameraComp->SetRelativeLocation(FVector(-10.f, 0.f, 60.f)); // Position the camera
-	CameraComp->bUsePawnControlRotation = true;
 
 	// Create static mesh
 	StaticMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CharacterMesh"));
