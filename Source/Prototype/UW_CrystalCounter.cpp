@@ -3,13 +3,31 @@
 
 #include "UW_CrystalCounter.h"
 #include "Components/TextBlock.h"
+#include "Components/Image.h"
 
 void UUW_CrystalCounter::UpdateCrystalCount(int32 Count, int32 Max)
 {
-	if (CrystalCount)
+	if (CrystalBox)
 	{
-		FString thing = FString::FromInt(Count)+"/"+FString::FromInt(Max);
-		CrystalCount->SetText(FText::FromString(thing));
+		//CrystalBox->ClearChildren();
+
+	for (int i=0;i<Max;i++)
+		{
+			UImage* CrystalImage = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass());
+
+		if(Count<=i)
+		{
+			CrystalImage->SetBrushFromTexture(CollectedCrystalTexture);
+		}
+		else
+		{
+			CrystalImage->SetBrushFromTexture(UncollectedCrystalTexture);
+		}
+		FVector2D ImageSize(550.0f, 720.0f); // Adjust the size as needed
+		CrystalImage->SetBrushSize(ImageSize);
+
+		CrystalBox->AddChild(CrystalImage);
+	}
 	}
 }
 
