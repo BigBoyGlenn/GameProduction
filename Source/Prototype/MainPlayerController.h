@@ -51,6 +51,7 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
 	TObjectPtr<UInputMappingContext> InputMappingContent = nullptr;
 
+
 protected:
 	// Action Handler Functions
 	void		HandleLook(const FInputActionValue& InputActionValue);

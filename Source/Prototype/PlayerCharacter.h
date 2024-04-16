@@ -43,6 +43,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	FVector MuzzleOffset;
 
+	// Health and Mana
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Health)
+	int Health;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Mana)
+	int Mana;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -51,5 +58,5 @@ protected:
 	UPROPERTY(EditAnywhere, Category = Projectile)
 	TSubclassOf<class AProjectile> ProjectileClass;
 	
-public:
+
 };

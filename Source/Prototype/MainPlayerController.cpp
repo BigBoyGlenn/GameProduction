@@ -62,6 +62,8 @@ void AMainPlayerController::OnPossess(APawn* aPawn)
 	if (ActionToggleSprint)
 		EnhancedInputComponent->BindAction(ActionToggleSprint, ETriggerEvent::Triggered, this,
 			&AMainPlayerController::HandleToggleSprint);
+
+
 }
 
 void AMainPlayerController::OnUnPossess()

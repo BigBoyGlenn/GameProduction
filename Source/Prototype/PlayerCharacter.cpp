@@ -40,9 +40,10 @@ APlayerCharacter::APlayerCharacter()
 	StaticMeshComp->CastShadow = false;
 	//StaticMeshComp->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	StaticMeshComp->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
-
 	
 }
+
+
 
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
