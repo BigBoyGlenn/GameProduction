@@ -7,9 +7,9 @@
 #include "Camera/CameraComponent.h"
 #include "Components/InputComponent.h"
 #include "Projectile.h"
-#include "NiagaraFunctionLibrary.h"
 #include "PlayerCharacter.generated.h"
 
+//#include "NiagaraFunctionLibrary.h"
 
 class UCameraComponent;
 
@@ -48,9 +48,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* StaffMeshComp;
 
-	// Heart mesh
+	// Hat mesh
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	UNiagaraSystem* HeartMeshComp;
+	UStaticMeshComponent* HatMeshComp;
+
+	// Heart mesh
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	//UNiagaraSystem* HeartMeshComp;
 
 	// Gun muzzle offset from the camera location.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)

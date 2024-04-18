@@ -8,11 +8,6 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "EnhancedInputComponent.h"
-#include "EnhancedInputSubsystems.h"
-#include "InputActionValue.h"
-#include "NiagaraFunctionLibrary.h"
-#include "NiagaraComponent.h"
 #include "Engine/LocalPlayer.h"
 
 // Sets default values
@@ -46,6 +41,10 @@ APlayerCharacter::APlayerCharacter()
     // Create staff mesh
     StaffMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Staff Mash"));
     StaffMeshComp->SetupAttachment(GetMesh(), FName("StaffSocket"));
+
+    // Create hat mesh
+    HatMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Hat Mesh"));
+    HatMeshComp->SetupAttachment(GetMesh(), FName("HatSocket"));
 
     // Create heart mesh
     //HeartMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Heart Mesh"));
