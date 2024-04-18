@@ -47,9 +47,22 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
 	TObjectPtr<UInputAction> ActionShoot = nullptr;
 
+	// The Input Action to map to zoom
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
+	TObjectPtr<UInputAction> ActionZoomIn = nullptr;
+
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
+	TObjectPtr<UInputAction> ActionZoomOut = nullptr;
+
+	// The Input Action to map to shop
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
+	TObjectPtr<UInputAction> ActionShop = nullptr;
+
 	// The Input Mapping Context to use.
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Player Input|Character Movement")
 	TObjectPtr<UInputMappingContext> InputMappingContent = nullptr;
+
 
 protected:
 	// Action Handler Functions
@@ -60,6 +73,9 @@ protected:
 	void		HandleShoot();
 	void		HandleToggleCrouch();
 	void		HandleToggleSprint();
+	void		HandleZoomIn();
+	void		HandleZoomOut();
+	void		HandleShop();
 
 
 	virtual void OnPossess(APawn* aPawn) override;

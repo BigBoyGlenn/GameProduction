@@ -8,9 +8,6 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "EnhancedInputComponent.h"
-#include "EnhancedInputSubsystems.h"
-#include "InputActionValue.h"
 #include "Engine/LocalPlayer.h"
 
 // Sets default values
@@ -30,7 +27,7 @@ APlayerCharacter::APlayerCharacter()
 	// Create camera component
 	CameraComp = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	CameraComp->SetupAttachment(SpringArmComp);
-	CameraComp->SetRelativeLocation(FVector(-10.f, 0.f, 60.f)); // Position the camera
+	//CameraComp->SetRelativeLocation(FVector(-10.f, 0.f, 60.f)); // Position the camera
 
 	// Create static mesh
 	StaticMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CharacterMesh"));
@@ -41,8 +38,22 @@ APlayerCharacter::APlayerCharacter()
 	//StaticMeshComp->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	StaticMeshComp->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
 
-	
+    // Create staff mesh
+    StaffMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Staff Mash"));
+    StaffMeshComp->SetupAttachment(GetMesh(), FName("StaffSocket"));
+
+    // Create hat mesh
+    HatMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Hat Mesh"));
+    HatMeshComp->SetupAttachment(GetMesh(), FName("HatSocket"));
+
+    // Create heart mesh
+    //HeartMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Heart Mesh"));
+    //HeartMeshComp->SetupAttachment(GetMesh(), FName("HeartSocket"));
+
+    
 }
+
+
 
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
@@ -107,3 +118,23 @@ void APlayerCharacter::Shoot()
         }
     }
 }
+
+void APlayerCharacter::ZoomIn()
+{
+    SpringArmComp->TargetArmLength = -300.f;
+    GetMesh()->SetVisibility(false);
+    HatMeshComp->SetVisibility(false);
+}
+
+void APlayerCharacter::ZoomOut()
+{
+    SpringArmComp->TargetArmLength = 300.f;
+    GetMesh()->SetVisibility(true);
+    HatMeshComp->SetVisibility(true);
+}
+
+void APlayerCharacter::Shop()
+{
+    GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("Whalecum to my wonderfull shop!!")));
+}
+
