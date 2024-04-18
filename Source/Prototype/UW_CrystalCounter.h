@@ -3,6 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/HorizontalBox.h"
+#include "Components/Image.h"
+#include "Blueprint/WidgetTree.h"
 #include "Blueprint/UserWidget.h"
 #include "UW_CrystalCounter.generated.h"
 
@@ -20,9 +23,13 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void UpdateSouls(int32 Count);
-
+	
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	class UTextBlock* CrystalCount;
+	class UHorizontalBox* CrystalBox;
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	class UTextBlock* SoulCount;
+	UPROPERTY(EditAnywhere)
+	UTexture2D* CollectedCrystalTexture;
+	UPROPERTY(EditAnywhere)
+	UTexture2D* UncollectedCrystalTexture;
 };
