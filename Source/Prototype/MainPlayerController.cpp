@@ -71,7 +71,9 @@ void AMainPlayerController::OnPossess(APawn* aPawn)
 		EnhancedInputComponent->BindAction(ActionZoomOut, ETriggerEvent::Triggered, this,
 			&AMainPlayerController::HandleZoomOut);
 
-
+	if (ActionShop)
+		EnhancedInputComponent->BindAction(ActionShop, ETriggerEvent::Triggered, this,
+			&AMainPlayerController::HandleShop);
 }
 
 void AMainPlayerController::OnUnPossess()
@@ -170,7 +172,7 @@ void AMainPlayerController::HandleZoomOut()
 
 void AMainPlayerController::HandleShop()
 {
-	if (PlayerCharacter)
+	if(PlayerCharacter)
 	{
 		PlayerCharacter->Shop();
 	}
