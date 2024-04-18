@@ -17,7 +17,7 @@ void UPlayer_AnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 {
 	Super::NativeUpdateAnimation(DeltaSeconds);
 
-	IsInAir = false;
+	
 
 	if(PlayerCharacter==nullptr)
 	{

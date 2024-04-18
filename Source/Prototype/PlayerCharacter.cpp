@@ -11,6 +11,8 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
 #include "Engine/LocalPlayer.h"
 
 // Sets default values
@@ -40,7 +42,16 @@ APlayerCharacter::APlayerCharacter()
 	StaticMeshComp->CastShadow = false;
 	//StaticMeshComp->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	StaticMeshComp->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
-	
+
+    // Create staff mesh
+    StaffMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Staff Mash"));
+    StaffMeshComp->SetupAttachment(GetMesh(), FName("StaffSocket"));
+
+    // Create heart mesh
+    //HeartMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Heart Mesh"));
+    //HeartMeshComp->SetupAttachment(GetMesh(), FName("HeartSocket"));
+
+    
 }
 
 

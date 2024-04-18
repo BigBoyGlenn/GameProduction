@@ -29,4 +29,11 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = true))
 	bool bIsInputAccelerating;
+
+protected:
+
+	// Call animation
+	//UPROPERTY(EditAnywhere)
+	//class UAniSequence* AttackAnimation;
+
 };

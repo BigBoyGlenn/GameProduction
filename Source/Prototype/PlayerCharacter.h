@@ -7,6 +7,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/InputComponent.h"
 #include "Projectile.h"
+#include "NiagaraFunctionLibrary.h"
 #include "PlayerCharacter.generated.h"
 
 
@@ -27,17 +28,29 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	// Shoot function
 	UFUNCTION(BlueprintCallable, Category = "Player|Shoot")
 	void Shoot();
 
+	// Spring arm
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	class USpringArmComponent* SpringArmComp;
 
+	// Camera
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	class UCameraComponent* CameraComp;
 
+	// Character mesh
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* StaticMeshComp;
+
+	// Staff mesh
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UStaticMeshComponent* StaffMeshComp;
+
+	// Heart mesh
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UNiagaraSystem* HeartMeshComp;
 
 	// Gun muzzle offset from the camera location.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
