@@ -118,3 +118,8 @@ void APlayerCharacter::Shoot()
         }
     }
 }
+
+void APlayerCharacter::Zoom()
+{
+    GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Zoom")));
+}

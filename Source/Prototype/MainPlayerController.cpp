@@ -63,6 +63,10 @@ void AMainPlayerController::OnPossess(APawn* aPawn)
 		EnhancedInputComponent->BindAction(ActionToggleSprint, ETriggerEvent::Triggered, this,
 			&AMainPlayerController::HandleToggleSprint);
 
+	if (ActionZoom)
+		EnhancedInputComponent->BindAction(ActionZoom, ETriggerEvent::Triggered, this,
+			&AMainPlayerController::HandleZoom);
+
 
 }
 
@@ -142,4 +146,12 @@ void AMainPlayerController::HandleToggleCrouch()
 void AMainPlayerController::HandleToggleSprint()
 {
 	
+}
+
+void AMainPlayerController::HandleZoom()
+{
+	if(PlayerCharacter)
+	{
+		PlayerCharacter->Zoom();
+	}
 }

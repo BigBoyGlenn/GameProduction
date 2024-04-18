@@ -32,6 +32,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Player|Shoot")
 	void Shoot();
 
+	// Zoom function
+	UFUNCTION(BlueprintCallable, Category = "Player|Shoot")
+	void Zoom();
+
 	// Spring arm
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	class USpringArmComponent* SpringArmComp;
