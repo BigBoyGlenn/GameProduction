@@ -63,9 +63,13 @@ void AMainPlayerController::OnPossess(APawn* aPawn)
 		EnhancedInputComponent->BindAction(ActionToggleSprint, ETriggerEvent::Triggered, this,
 			&AMainPlayerController::HandleToggleSprint);
 
-	if (ActionZoom)
-		EnhancedInputComponent->BindAction(ActionZoom, ETriggerEvent::Triggered, this,
-			&AMainPlayerController::HandleZoom);
+	if (ActionZoomIn)
+		EnhancedInputComponent->BindAction(ActionZoomIn, ETriggerEvent::Triggered, this,
+			&AMainPlayerController::HandleZoomIn);
+
+	if (ActionZoomOut)
+		EnhancedInputComponent->BindAction(ActionZoomOut, ETriggerEvent::Triggered, this,
+			&AMainPlayerController::HandleZoomOut);
 
 
 }
@@ -148,10 +152,26 @@ void AMainPlayerController::HandleToggleSprint()
 	
 }
 
-void AMainPlayerController::HandleZoom()
+void AMainPlayerController::HandleZoomIn()
 {
 	if(PlayerCharacter)
 	{
-		PlayerCharacter->Zoom();
+		PlayerCharacter->ZoomIn();
+	}
+}
+
+void AMainPlayerController::HandleZoomOut()
+{
+	if(PlayerCharacter)
+	{
+		PlayerCharacter->ZoomOut();
+	}
+}
+
+void AMainPlayerController::HandleShop()
+{
+	if (PlayerCharacter)
+	{
+		PlayerCharacter->Shop();
 	}
 }

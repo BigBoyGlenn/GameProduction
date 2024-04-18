@@ -34,7 +34,14 @@ public:
 
 	// Zoom function
 	UFUNCTION(BlueprintCallable, Category = "Player|Shoot")
-	void Zoom();
+	void ZoomIn();
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Shoot")
+	void ZoomOut();
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Shoot")
+	void Shop();
+
 
 	// Spring arm
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

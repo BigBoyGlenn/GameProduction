@@ -27,7 +27,7 @@ APlayerCharacter::APlayerCharacter()
 	// Create camera component
 	CameraComp = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	CameraComp->SetupAttachment(SpringArmComp);
-	CameraComp->SetRelativeLocation(FVector(-10.f, 0.f, 60.f)); // Position the camera
+	//CameraComp->SetRelativeLocation(FVector(-10.f, 0.f, 60.f)); // Position the camera
 
 	// Create static mesh
 	StaticMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CharacterMesh"));
@@ -119,7 +119,22 @@ void APlayerCharacter::Shoot()
     }
 }
 
-void APlayerCharacter::Zoom()
+void APlayerCharacter::ZoomIn()
 {
-    GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Zoom")));
+    SpringArmComp->TargetArmLength = -300.f;
+    GetMesh()->SetVisibility(false);
+    HatMeshComp->SetVisibility(false);
 }
+
+void APlayerCharacter::ZoomOut()
+{
+    SpringArmComp->TargetArmLength = 300.f;
+    GetMesh()->SetVisibility(true);
+    HatMeshComp->SetVisibility(true);
+}
+
+void APlayerCharacter::Shop()
+{
+    GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("Whalecum to my wonderfull shop!!")));
+}
+
