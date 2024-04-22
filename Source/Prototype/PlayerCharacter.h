@@ -51,10 +51,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	class UCameraComponent* CameraComp;
 
-	// Character mesh
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	UStaticMeshComponent* StaticMeshComp;
-
 	// Staff mesh
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* StaffMeshComp;
@@ -62,10 +58,6 @@ public:
 	// Hat mesh
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* HatMeshComp;
-
-	// Heart mesh
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	//UNiagaraSystem* HeartMeshComp;
 
 	// Gun muzzle offset from the camera location.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
