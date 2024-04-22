@@ -36,11 +36,6 @@ APlayerCharacter::APlayerCharacter()
     // Create hat mesh
     HatMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Hat Mesh"));
     HatMeshComp->SetupAttachment(GetMesh(), FName("HatSocket"));
-
-    // Create heart mesh
-    //HeartMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Heart Mesh"));
-    //HeartMeshComp->SetupAttachment(GetMesh(), FName("HeartSocket"));
-
     
 }
 
