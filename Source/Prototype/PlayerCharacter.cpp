@@ -29,15 +29,6 @@ APlayerCharacter::APlayerCharacter()
 	CameraComp->SetupAttachment(SpringArmComp);
 	//CameraComp->SetRelativeLocation(FVector(-10.f, 0.f, 60.f)); // Position the camera
 
-	// Create static mesh
-	StaticMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CharacterMesh"));
-	StaticMeshComp->SetOnlyOwnerSee(true);
-	StaticMeshComp->SetupAttachment(CameraComp);
-	StaticMeshComp->bCastDynamicShadow = false;
-	StaticMeshComp->CastShadow = false;
-	//StaticMeshComp->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
-	StaticMeshComp->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
-
     // Create staff mesh
     StaffMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Staff Mash"));
     StaffMeshComp->SetupAttachment(GetMesh(), FName("StaffSocket"));
