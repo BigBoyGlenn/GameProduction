@@ -25,6 +25,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Enemy)
 	float Speed;
 
+	UPROPERTY(BlueprintReadWrite,EditAnywhere)
+	TArray<AActor*> Waypoints;
+
 	// Crystal mesh
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* StolenCrystal;

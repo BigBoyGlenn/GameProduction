@@ -2,6 +2,8 @@
 
 
 #include "EnemieSpawner.h"
+#include "Blueprint/WidgetBlueprintLibrary.h" // Include this for setting blueprint variables
+
 
 // Sets default values
 AEnemieSpawner::AEnemieSpawner()
@@ -22,7 +24,9 @@ void AEnemieSpawner::Spawn()
 {
 	if(SpawnEnemies)
 	{
-		GetWorld()->SpawnActor<AActor>(Enemie,GetActorLocation(),GetActorRotation());
+		AEnemy* Spawned =GetWorld()->SpawnActor<AEnemy>(Enemie,GetActorLocation(),GetActorRotation());
+		if(Spawned)
+		Spawned->Waypoints = Waypoints;
 	}
 }
 

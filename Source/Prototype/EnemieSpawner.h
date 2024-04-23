@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Enemy.h"
 #include "GameFramework/Actor.h"
 #include "EnemieSpawner.generated.h"
 
@@ -18,7 +19,7 @@ public:
 	TArray<AActor*> Waypoints;
 	
 	UPROPERTY(BlueprintReadWrite,EditAnywhere)
-	TSubclassOf<AActor> Enemie;
+	TSubclassOf<AEnemy> Enemie;
 
 	UPROPERTY(BlueprintReadWrite,EditAnywhere)
 	bool SpawnEnemies = true;

@@ -10,7 +10,7 @@ AEnemy::AEnemy()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	Waypoints.Empty();
 	// Create Crystal mesh
 	StolenCrystal = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Crystal Mash"));
 	StolenCrystal->SetupAttachment(GetMesh(), FName("CrystalSocket"));
