@@ -42,7 +42,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Player|Shoot")
 	void Shop();
 
-
 	// Spring arm
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	class USpringArmComponent* SpringArmComp;
@@ -69,6 +68,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Mana)
 	int Mana;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = IsAttacking)
+	bool IsAttack;
 
 protected:
 	// Called when the game starts or when spawned

@@ -25,9 +25,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Enemy)
 	float Speed;
 
+	// Enemy mesh
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	USkeletalMeshComponent* EnemyMesh;
+
 	// Crystal mesh
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* StolenCrystal;
+
+	// On overlap with another actor
+	UFUNCTION()
+	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 
 protected:
 	// Called when the game starts or when spawned

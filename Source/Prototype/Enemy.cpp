@@ -2,6 +2,7 @@
 
 
 #include "Enemy.h"
+#include "Projectile.h"
 
 
 
@@ -11,10 +12,19 @@ AEnemy::AEnemy()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	/*Skeletal Mesh Component*/
+	EnemyMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Enemy Mesh"));
+	
+
 	// Create Crystal mesh
-	StolenCrystal = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Crystal Mash"));
+	StolenCrystal = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Crystal Mesh"));
 	StolenCrystal->SetupAttachment(GetMesh(), FName("CrystalSocket"));
 	StolenCrystal->SetVisibility(true);
+}
+
+void AEnemy::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
+{
+	
 }
 
 // Called when the game starts or when spawned
