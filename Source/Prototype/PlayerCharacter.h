@@ -70,6 +70,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Mana)
 	int Mana;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attack)
+	bool IsAttacking;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
