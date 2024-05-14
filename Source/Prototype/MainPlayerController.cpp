@@ -151,6 +151,10 @@ void AMainPlayerController::HandleToggleCrouch()
 
 void AMainPlayerController::HandleToggleSprint()
 {
+	if(PlayerCharacter)
+	{
+		PlayerCharacter->SprintStart();
+	}
 	
 }
 

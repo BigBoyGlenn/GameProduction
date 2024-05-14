@@ -124,3 +124,13 @@ void APlayerCharacter::Shop()
     GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("Whalecum to my wonderfull shop!!")));
 }
 
+void APlayerCharacter::SprintStart()
+{
+    
+    GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("sprinting")));
+}
+
+void APlayerCharacter::SprintEnd()
+{
+}
+

@@ -29,18 +29,24 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	// Shoot function
-	UFUNCTION(BlueprintCallable, Category = "Player|Shoot")
+	UFUNCTION(BlueprintCallable, Category = "Player|Action")
 	void Shoot();
 
 	// Zoom function
-	UFUNCTION(BlueprintCallable, Category = "Player|Shoot")
+	UFUNCTION(BlueprintCallable, Category = "Player|Action")
 	void ZoomIn();
 
-	UFUNCTION(BlueprintCallable, Category = "Player|Shoot")
+	UFUNCTION(BlueprintCallable, Category = "Player|Action")
 	void ZoomOut();
 
-	UFUNCTION(BlueprintCallable, Category = "Player|Shoot")
+	UFUNCTION(BlueprintCallable, Category = "Player|Action")
 	void Shop();
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Action")
+	void SprintStart();
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Action")
+	void SprintEnd();
 
 
 	// Spring arm
@@ -76,6 +82,9 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	float WalkSpeed = 600.f;
+	float SprintSpeed = 900.f;
 
 	// Projectile class to spawn.
 	UPROPERTY(EditAnywhere, Category = Projectile)
