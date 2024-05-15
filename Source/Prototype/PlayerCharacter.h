@@ -40,9 +40,6 @@ public:
 	void ZoomOut();
 
 	UFUNCTION(BlueprintCallable, Category = "Player|Action")
-	void Shop();
-
-	UFUNCTION(BlueprintCallable, Category = "Player|Action")
 	void SprintStart();
 
 	UFUNCTION(BlueprintCallable, Category = "Player|Action")
