@@ -178,6 +178,6 @@ void AMainPlayerController::HandleShop()
 {
 	if(PlayerCharacter)
 	{
-		PlayerCharacter->Shop();
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("Whalecum to my wonderfull shop!!")));
 	}
 }
