@@ -9,7 +9,7 @@ void UUW_CrystalCounter::UpdateCrystalCount(int32 Count, int32 Max)
 {
 	if (CrystalBox)
 	{
-		//CrystalBox->ClearChildren();
+		CrystalBox->ClearChildren();
 
 	for (int i=0;i<Max;i++)
 		{
