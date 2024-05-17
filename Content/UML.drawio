@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-17T08:23:41.624Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0" etag="bP_22BfAh828ftnjqTs9" version="24.4.3" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-17T08:31:45.878Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0" etag="2-olg10Cnv3U2Wy52kHv" version="24.4.3" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="701" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -121,7 +121,7 @@
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-8" value="+ ZoomOut: void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-5">
           <mxGeometry y="78" width="160" height="22" as="geometry" />
         </mxCell>
-        <mxCell id="MOsLWzoUDGvoJsrRw9AN-9" value="+SprintStart(): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-5">
+        <mxCell id="MOsLWzoUDGvoJsrRw9AN-9" value="+ SprintStart(): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-5">
           <mxGeometry y="100" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-10" value="+ SprintEnd(): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-5">
@@ -189,59 +189,47 @@
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-35" value="+ Tick(DeltaTime: float): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
           <mxGeometry y="78" width="160" height="22" as="geometry" />
         </mxCell>
-        <mxCell id="MOsLWzoUDGvoJsrRw9AN-36" value="+SprintStart(): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
+        <mxCell id="MOsLWzoUDGvoJsrRw9AN-36" value="FireInDirection(ShootDirection: FVector): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
           <mxGeometry y="100" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="MOsLWzoUDGvoJsrRw9AN-37" value="+ SprintEnd(): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
+        <mxCell id="MOsLWzoUDGvoJsrRw9AN-37" value="+OnHit(HitComponent: UPrimitiveComponent*,OtherActor:AActor*, OtherComponent: UPrimitiveComponent*, NormalImpulse: FVector, Hit: const FHitResult&amp;): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
           <mxGeometry y="126" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="MOsLWzoUDGvoJsrRw9AN-38" value="+ SetupPlayerInputComponent)PlayerInputComponent: UInputComponent*): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="152" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="MOsLWzoUDGvoJsrRw9AN-39" value="+ Tick(DeltaTime: float): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="178" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="MOsLWzoUDGvoJsrRw9AN-40" value="+ BeginPlay(): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="204" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="MOsLWzoUDGvoJsrRw9AN-41" value="+ APlayerCharacter():" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="230" width="160" height="26" as="geometry" />
-        </mxCell>
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-42" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="256" width="160" height="8" as="geometry" />
+          <mxGeometry y="152" width="160" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="MOsLWzoUDGvoJsrRw9AN-43" value="- SpringArmComp: USpringArmComponent*" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="264" width="160" height="26" as="geometry" />
+        <mxCell id="MOsLWzoUDGvoJsrRw9AN-43" value="- CollisionComp: USphereComponent*" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
+          <mxGeometry y="160" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="MOsLWzoUDGvoJsrRw9AN-44" value="- CameraComp: UCameraComponent*" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="290" width="160" height="26" as="geometry" />
+        <mxCell id="MOsLWzoUDGvoJsrRw9AN-44" value="- ProjectileMovement: UProjectileMovementComponent*" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
+          <mxGeometry y="186" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-45" value="- StaffMeshComp: UStaticMeshComponent*" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="316" width="160" height="26" as="geometry" />
+          <mxGeometry y="212" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-46" value="- HatMeshComp: UStaticMeshComponent*" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="342" width="160" height="26" as="geometry" />
+          <mxGeometry y="238" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-47" value="- MuzzelOffset:FVector" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="368" width="160" height="26" as="geometry" />
+          <mxGeometry y="264" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-48" value="- Health: int" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="394" width="160" height="26" as="geometry" />
+          <mxGeometry y="290" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-49" value="- Mana: int" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="420" width="160" height="26" as="geometry" />
+          <mxGeometry y="316" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-50" value="- IsAttacing: bool" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="446" width="160" height="26" as="geometry" />
+          <mxGeometry y="342" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-51" value="- WalkSpeed: float" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="472" width="160" height="26" as="geometry" />
+          <mxGeometry y="368" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-52" value="- SpintSpeed: float" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="498" width="160" height="26" as="geometry" />
+          <mxGeometry y="394" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MOsLWzoUDGvoJsrRw9AN-53" value="- ProjectileClass: TSubclassOf&lt;AProjectile&gt;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="MOsLWzoUDGvoJsrRw9AN-32">
-          <mxGeometry y="524" width="160" height="26" as="geometry" />
+          <mxGeometry y="420" width="160" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
